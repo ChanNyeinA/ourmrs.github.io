@@ -4,50 +4,83 @@
     box-sizing: border-box;
 }
 
+html {
+    background: rgb(255, 255, 255);
+}
+
 header {
-    background: red;
-    margin: 5px 5px 0 5px;
-    padding: 10px;
-    height: 50vh;
-    font-family: roboto;
-    color: white;
-    border-radius: 30px;
+    position: relative;
+    height: 90vh;
+    background-image: linear-gradient(to right bottom,
+    rgba(255, 90, 0, 0.8),
+    rgba(255, 0, 0, 0.8)),
+    url(img/img-1.jpeg);
+    background-size: cover;
+    margin: 10px;
+    border-radius: 20px;
 }
 
 .main-header, .main-header-short, .sub-header {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 50px;
+    font-family: roboto;
+    color: white;
 }
 
 .main-header{
     font-size: 50px;
     letter-spacing: 5px;
-    text-shadow: 1px 1px 5px rgb(187, 187, 187);
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 
 .main-header-short {
     font-size: 50px;
-    margin
-}
-
-.main-logo {
-    height: 60%;
-    margin-top: 50px;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
+    margin-top: 100px;
 }
 
 .sub-header{
     font-size: 40px;
     font-weight: 250;
     text-transform: uppercase;
+
+}
+
+.about, .contact {
+    margin-top: 150px;
+    text-decoration: none;
+    color: red;
+}
+
+.about {
+    background-color: white;
+    height: 40px;
+    width: 100px;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 41%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px black;
+    opacity: 0.6;
+}
+.contact {
+    background-color: white;
+    height: 40px;
+    width: 100px;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 40px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px black;
+    opacity: 0.6;
 }
 
 /* media start */
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 320px) {
     header {
-        height: 200px;
+        height: 90vh;
     }
     .main-header {
         font-size: 20px;
@@ -61,14 +94,29 @@ header {
         font-size: 10px;
         margin-top: -20px;
     }
-    .main-logo {
-        height: 40%;
-        margin-top: 20px;
+    
+}
+@media screen and (min-width: 375px) {
+    header {
+        height: 90vh;
     }
+    .main-header {
+        font-size: 20px;
+        letter-spacing: 0;
+    }
+    .main-header-short {
+        margin-top: -20px;
+        font-size: 20px;
+    }
+    .sub-header {
+        font-size: 10px;
+        margin-top: -20px;
+    }
+    
 }
 @media screen and (min-width: 425px) {
     header {
-        height: 200px;
+        height: 90vh;
     }
     .main-header {
         font-size: 20px;
@@ -82,14 +130,11 @@ header {
         font-size: 15px;
         margin-top: -10px;
     }
-    .main-logo {
-        height: 50%;
-        margin-top: 10px;
-    }
+    
 }
 @media screen and (min-width: 768px) {
     header {
-        height: 300px;
+        height: 90vh;
         padding-top: 20px;
     }
     .main-header {
@@ -104,18 +149,18 @@ header {
         font-size: 20px;
         margin-top: -20px;
     }
-    .main-logo {
-        height: 60%;
-        margin-top: 40px;
+    .about {
+        margin-left: 35%;
     }
+    
 }
 @media screen and (min-width: 1024px) {
     header {
-        height: 350px;
+        height: 90vh;
     }
     .main-header {
         font-size: 40px;
-        letter-spacing: 0;
+        letter-spacing: 5px;
     }
     .main-header-short {
         margin-top: -20px;
@@ -125,30 +170,65 @@ header {
         font-size: 30px;
         margin-top: -15px;
     }
-    .main-logo {
-        height: 60%;
-        margin-top: 35px;
+    .about, .contact {
+        margin-top: 90px;
     }
+    .about {
+        margin-left: 37%;
+    }
+    
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1400px) {
     header {
         padding-top: 20px;
-        height: 350px;
+        height: 90h;
     }
     .main-header {
-        font-size: 40px;
+        font-size: 50px;
         letter-spacing: 0;
     }
     .main-header-short {
         margin-top: -10px;
-        font-size: 40px;
+        font-size: 50px;
     }
     .sub-header {
-        font-size: 25px;
+        font-size: 40px;
         margin-top: -10px;
     }
-    .main-logo {
-        height: 70%;
-        margin-top: 20px;
+    .about, .contact {
+        margin-top: 90px;
+    }
+    .about {
+        margin-left: 41%;
+    }
+
+}
+@media screen and (min-height: 1400px) {
+    header {
+        height: 70vh;
+        padding-top: 200px;
+    }
+    .main-header, .main-header-short {
+        font-size: 100px;
+    }
+    .sub-header {
+        font-size: 70px;
+    }
+
+    .contact, .about {
+        margin-top: 200px;
+        height: 100px;
+        width: 80%;
+        font-size: 70px;
+    }
+    .about {
+        margin-left: 100px;
+        line-height: 100px;
+       
+    }
+    .contact {
+        margin-left: 100px;
+       
+        line-height: 100px;
     }
 }
